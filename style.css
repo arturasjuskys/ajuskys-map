@@ -1,0 +1,136 @@
+:root {
+  --brand-1: #ffb545;
+  --brand-2: #00c46a;
+
+  --dark-1: #2d3439;
+  --dark-2: #42484d;
+  --light-1: #aaa;
+  --light-2: #ececec;
+  --light-3: rgb(214, 222, 224);
+
+  --small: 0.5rem;
+}
+
+/* default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--light-2);
+  background-color: #fff;
+}
+main {
+  display: flex;
+  height: 100vh;
+  padding: 2.5rem;
+}
+
+/* styling */
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50rem;
+  background-color: var(--dark-1);
+  padding: 3rem 5rem 4rem 5rem;
+}
+.logo {
+  height: 5.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+.locations {
+  list-style: none;
+  height: 77vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.location {
+  background-color: var(--dark-2);
+  border-radius: var(--small);
+  padding: 1.5rem 2.25rem;
+  margin-right: 0.7rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+}
+.running {
+  border-left: 5px solid var(--brand-2);
+}
+.cycling {
+  border-left: 5px solid var(--brand-1);
+}
+.title {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.details {
+  display: flex;
+  align-items: baseline;
+}
+.icon {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  height: 0.3rem;
+}
+.value {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+.unit {
+  font-size: 1.1rem;
+  color: var(--light-1);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+form {
+  transform: translateY(-30rem);
+  height: 0;
+  opacity: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.row-hidden {
+  display: none;
+}
+form label {
+  width: 15rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+form input,
+form select {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  margin: 0.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: var(--small);
+  background-color: var(--light-3);
+  transition: all 0.2s;
+}
+form input:focus {
+  outline: none;
+  background-color: #fff;
+}
+button {
+  display: none;
+}
+
+#map {
+  flex: 1;
+  height: 100%;
+  background-color: var(--light-1);
+}

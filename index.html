@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Map App</title>
+  </head>
+  <body>
+    <main>
+      <article class="left">
+        <img class="logo" src="assets/logo.png" alt="logo" />
+        <ul class="locations">
+          <form class="hidden">
+            <div class="row">
+              <label for="type">Type</label>
+              <select name="type">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+            <div class="row">
+              <label for="distance">Distance</label>
+              <input name="distance" type="number" />
+            </div>
+            <div class="row">
+              <label for="duration">Duration</label>
+              <input name="duration" type="time" />
+            </div>
+            <div class="row">
+              <label for="speed">Speed</label>
+              <input name="speed" type="number" />
+            </div>
+            <button>OK</button>
+          </form>
+
+          <li class="location running" data-id="1234567890">
+            <h2 class="title">Running on April 14</h2>
+            <div class="details">
+              <span class="icon type">🏃‍♂️</span>
+              <span class="value">5.2</span>
+              <span>km</span>
+            </div>
+            <div class="details">
+              <span class="icon">⏱</span>
+              <span class="value">24</span>
+              <span class="unit">min</span>
+            </div>
+            <div class="details">
+              <span class="icon">⚡️</span>
+              <span class="value">4.6</span>
+              <span class="unit">min/km</span>
+            </div>
+            <div class="details">
+              <span class="icon">🦶🏼</span>
+              <span class="value">178</span>
+              <span class="unit">spm</span>
+            </div>
+          </li>
+
+          <li class="location cycling" data-id="1234567891">
+            <h2 class="title">Running on April 14</h2>
+            <div class="details">
+              <span class="icon type">🚴‍♀️</span>
+              <span class="value">5.2</span>
+              <span class="unit">km</span>
+            </div>
+            <div class="details">
+              <span class="icon">⏱</span>
+              <span class="value">24</span>
+              <span class="unit">min</span>
+            </div>
+            <div class="details">
+              <span class="icon">⚡️</span>
+              <span class="value">4.6</span>
+              <span class="unit">min/km</span>
+            </div>
+            <div class="details">
+              <span class="icon">🦶🏼</span>
+              <span class="value">178</span>
+              <span class="unit">spm</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="right" id="map"></article>
+    </main>
+  </body>
+</html>
