@@ -21,7 +21,7 @@
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""
     ></script>
-    <script defer src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <title>Map App</title>
   </head>
   <body>
@@ -29,10 +29,10 @@
       <article class="left">
         <img class="logo" src="assets/logo.png" alt="logo" />
         <ul class="locations">
-          <form class="hidden">
+          <form class="form hidden">
             <div class="row">
               <label for="type">Type</label>
-              <select name="type">
+              <select class="input-type" name="type">
                 <option value="running">Running</option>
                 <option value="cycling">Cycling</option>
               </select>
@@ -43,16 +43,20 @@
             </div>
             <div class="row">
               <label for="duration">Duration</label>
-              <input name="duration" type="time" />
+              <input name="duration" type="text" />
             </div>
             <div class="row">
-              <label for="speed">Speed</label>
-              <input name="speed" type="number" />
+              <label for="cadence">Cadence</label>
+              <input name="cadence" type="text" />
+            </div>
+            <div class="row row-hidden">
+              <label for="elevation">Elev Gain</label>
+              <input name="elevation" type="number" />
             </div>
             <button>OK</button>
           </form>
 
-          <li class="location running" data-id="1234567890">
+          <!-- <li class="location running" data-id="1234567890">
             <h2 class="title">Running on April 14</h2>
             <div class="details">
               <span class="icon type">🏃‍♂️</span>
@@ -74,9 +78,9 @@
               <span class="value">178</span>
               <span class="unit">spm</span>
             </div>
-          </li>
+          </li> -->
 
-          <li class="location cycling" data-id="1234567891">
+          <!-- <li class="location cycling" data-id="1234567891">
             <h2 class="title">Running on April 14</h2>
             <div class="details">
               <span class="icon type">🚴‍♀️</span>
@@ -98,7 +102,7 @@
               <span class="value">178</span>
               <span class="unit">spm</span>
             </div>
-          </li>
+          </li> -->
         </ul>
       </article>
 
