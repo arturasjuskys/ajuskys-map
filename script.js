@@ -163,44 +163,47 @@ class App {
     let html = `
       <li class="location ${workout.type}" data-id="${workout.id}">
         <h2 class="title">${workout.description}</h2>
-        <div class="details">
-          <span class="icon type">${
-            workout.type === "running" ? "🏃‍♂️" : "🚴‍♀️"
-          }</span>
-          <span class="value">${workout.distance}</span>
-          <span>km</span>
-        </div>
-        <div class="details">
-          <span class="icon">⏱</span>
-          <span class="value">${workout.duration}</span>
-          <span class="unit">min</span>
-        </div>
+        <div class="wrapper">
+          <div class="details">
+            <span class="icon type">${
+              workout.type === "running" ? "🏃‍♂️" : "🚴‍♀️"
+            }</span>
+            <span class="value">${workout.distance}</span>
+            <span>km</span>
+          </div>
+          <div class="details">
+            <span class="icon">⏱</span>
+            <span class="value">${workout.duration}</span>
+            <span class="unit">min</span>
+          </div>
     `;
     if (workout.type === "running")
       html += `
-        <div class="details">
-          <span class="icon">⚡️</span>
-          <span class="value">${workout.pace.toFixed(1)}</span>
-          <span class="unit">min/km</span>
-        </div>
-        <div class="details">
-          <span class="icon">🦶🏼</span>
-          <span class="value">${workout.cadence}</span>
-          <span class="unit">spm</span>
+          <div class="details">
+            <span class="icon">⚡️</span>
+            <span class="value">${workout.pace.toFixed(1)}</span>
+            <span class="unit">min/km</span>
+          </div>
+          <div class="details">
+            <span class="icon">🦶🏼</span>
+            <span class="value">${workout.cadence}</span>
+            <span class="unit">spm</span>
+          </div>
         </div>
       </li>
     `;
     if (workout.type === "cycling")
       html += `
-        <div class="details">
-          <span class="icon">⚡️</span>
-          <span class="value">${workout.speed.toFixed(1)}</span>
-          <span class="unit">min/km</span>
-        </div>
-        <div class="details">
-          <span class="icon">⛰</span>
-          <span class="value">${workout.elevationGain}</span>
-          <span class="unit">spm</span>
+          <div class="details">
+            <span class="icon">⚡️</span>
+            <span class="value">${workout.speed.toFixed(1)}</span>
+            <span class="unit">min/km</span>
+          </div>
+          <div class="details">
+            <span class="icon">⛰</span>
+            <span class="value">${workout.elevationGain}</span>
+            <span class="unit">spm</span>
+          </div>
         </div>
       </li>
     `;

@@ -37,7 +37,6 @@ main {
 .left {
   display: flex;
   flex-direction: column;
-  flex-basis: 50rem;
   background-color: var(--dark-1);
   padding: 3rem 5rem 4rem 5rem;
 }
@@ -96,8 +95,7 @@ main {
 }
 form {
   padding: 0 2.25rem;
-  margin-bottom: 0;
-  margin-right: 0.7rem;
+  margin: 0 0.7rem 0.7rem 0;
   border-radius: var(--small);
   background-color: var(--dark-2);
   padding: 1.5rem 2.25rem;
@@ -139,4 +137,26 @@ button {
   flex: 1;
   height: 100%;
   background-color: var(--light-1);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+  .left {
+    height: 30%;
+    padding: 1rem;
+  }
+  .logo {
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+  .location {
+    padding: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .wrapper {
+    display: flex;
+  }
 }
