@@ -249,8 +249,11 @@ class App {
 
   reset() {
     localStorage.removeItem("workouts"); // deleting local storage
-    location.reload(); // reload page => app.reset()
+    location.reload(); // reload page
   }
 }
 
 const app = new App();
+
+// clear local storage
+// app.reset();
